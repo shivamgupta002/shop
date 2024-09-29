@@ -6,7 +6,7 @@ export default function Home() {
   return (
    <>
    <Header/>
-   <Cauracel/>
+   {/* <Cauracel/> */}
    {/* <div style={{maxHeight:"100vh",maxWidth:"30vw",overflow:"hidden"}}>
 
    <Product/>
