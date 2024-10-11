@@ -1,63 +1,76 @@
-import React from "react";
+"use client"
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Container from '@mui/material/Container';
+import { useState } from 'react';
 
-const Header = () => {
+export default function Header() {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
-    <>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+    <AppBar position="static" sx={{color:"white",backgroundColor:"black"}}>
+      <Container>
+        <Toolbar >
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Gupta Radio Service
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Sewing machine 
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Fans 
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                Accessories
-                </a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </>
-  );
-};
+          </Typography>
 
-export default Header;
+          {/* Menu for larger screens */}
+          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Button color="inherit">Home</Button>
+            <Button color="inherit">About</Button>
+            <Button color="inherit">Services</Button>
+            <Button color="inherit">Contact</Button>
+          </Box>
+
+          {/* Mobile menu */}
+          <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={handleMenuOpen}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+            >
+              <MenuItem onClick={handleMenuClose}>Home</MenuItem>
+              <MenuItem onClick={handleMenuClose}>About</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Services</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Contact</MenuItem>
+            </Menu>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+}
