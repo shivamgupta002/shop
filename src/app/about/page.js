@@ -4,7 +4,7 @@ import Header from '../_components/Header'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
-const page = () => {
+const AboutPage = () => {
    
    React.useEffect(() => {
     AOS.init({
@@ -15,9 +15,9 @@ const page = () => {
   return (
     <>
       <Header/>
-      <div>About Page</div>
+      <div>About page</div>
     </>
   )
 }
 
-export default page
+export default AboutPage
