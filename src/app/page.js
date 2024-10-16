@@ -30,7 +30,7 @@ export default function Home() {
         {data &&
           data.map((item) => (
             // Custom card
-            <CustomCard data={item} />
+            <CustomCard key={item.id} data={item} />
           ))}
       </Box>
       <Box
@@ -42,7 +42,6 @@ export default function Home() {
           margin: "2rem",
         }}
       >
-        <Typography variant="h5">Sorry for in convince.</Typography>
         <Typography variant="h3">
           We update aur product in some days{" "}
         </Typography>
