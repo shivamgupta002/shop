@@ -1,0 +1,73 @@
+export const data = [
+    {
+      id: 1,
+      name: "Pooja Sewing Machine",
+      description: "A durable, reliable sewing machine perfect for both beginners and professionals. Ideal for tailoring, alterations, and home use, this machine combines efficiency with precision stitching.",
+      image: "/images/pooja_sewing_machine.jpg",
+      price: 120,
+    },
+    {
+      id: 2,
+      name: "Orient Ceiling Fan",
+      description: "A high-speed, energy-efficient ceiling fan designed to provide superior air circulation. Its sleek design complements any room decor while saving on electricity.",
+      image: "/images/orient_ceiling_fan.jfif",
+      price: 50,
+    },
+    {
+      id: 3,
+      name: "Golden Sewing Machine",
+      description: "A premium-grade sewing machine known for its high-speed performance and versatility. Suitable for heavy-duty stitching, embroidery, and quilting, with a golden finish for a stylish touch.",
+      image: "/images/golden_sewing_machine.png",
+      price: 3200,
+    },
+    {
+      id: 4,
+      name: "Portable Air Cooler",
+      description: "A compact, portable air cooler featuring powerful airflow and energy-efficient operation. Ideal for cooling medium-sized rooms during hot weather while keeping your electricity bill low.",
+      image: "/images/cooler.jfif",
+      price: 3200,
+    },
+    {
+      id: 5,
+      name: "Prestige Induction Cooktop",
+      description: "A modern, user-friendly induction cooktop with a sleek design, offering fast and efficient cooking. Features a digital display, multiple cooking modes, and temperature control settings.",
+    //   image: "/images/prestige_induction_cooktop.jpg",
+      price: 80,
+    },
+    {
+      id: 6,
+      name: "Bajaj Steam Iron",
+      description: "An efficient steam iron that provides wrinkle-free clothes with ease. Lightweight, durable, and equipped with variable steam control for all types of fabrics.",
+    //   image: "/images/bajaj_steam_iron.jpg",
+      price: 30,
+    },
+    {
+      id: 7,
+      name: "Samsung LED TV 32 Inch",
+      description: "Experience high-definition viewing with Samsung's 32-inch LED TV. Offering crisp, clear picture quality and vibrant colors, it is perfect for small to medium-sized rooms.",
+    //   image: "/images/samsung_led_tv.jpg",
+      price: 250,
+    },
+    {
+      id: 8,
+      name: "Philips Electric Kettle",
+      description: "A fast-heating electric kettle with auto shut-off and boil-dry protection. Ideal for boiling water, making tea, and preparing instant meals in just minutes.",
+    //   image: "/images/philips_kettle.jpg",
+      price: 40,
+    },
+    {
+      id: 9,
+      name: "LG Microwave Oven",
+      description: "A versatile microwave oven that combines convection and grill cooking. Perfect for baking, grilling, reheating, and defrosting, with a sleek design that fits any kitchen.",
+    //   image: "/images/lg_microwave.jpg",
+      price: 200,
+    },
+    {
+      id: 10,
+      name: "Usha Pedestal Fan",
+      description: "A powerful and adjustable pedestal fan that provides excellent air circulation. Features adjustable height and speed settings, making it perfect for any room in the house.",
+    //   image: "/images/usha_pedestal_fan.jpg",
+      price: 45,
+    },
+  ];
+  
